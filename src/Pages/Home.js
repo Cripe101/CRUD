@@ -1,5 +1,5 @@
 import UseFetch from "../UseFetch";
-import List from "../Components/List";
+import List from "../components/List";
 
 const Home = () => {
   const {
@@ -9,10 +9,10 @@ const Home = () => {
   } = UseFetch("http://localhost:8000/datas");
 
   return (
-    <div className="flex flex-col items-center p-20">
+    <div className="flex flex-col items-center">
       {error && <div>{error}</div>}
-      {isLoading && <div>Loading...</div>}
-      {anime && <List datas={anime} title="All Anime" />}
+      {isLoading && <div className="text-center p-20">Loading...</div>}
+      {anime && <List datas={anime} title="All List" />}
     </div>
   );
 };

@@ -1,17 +1,17 @@
-import Details from "./Components/Details";
-import Home from "./Home";
-import PageNotFound from "./Components/PageNotFound";
+import PageNotFound from "./components/PageNotFound";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import CreateList from "./CreateList";
-import UpdateList from "./Components/UpdateList";
-import Navbar from "./Components/Navbar";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import CreateList from "./pages/CreateList";
+import Details from "./components/Details";
+import UpdateList from "./components/UpdateList";
 
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="App h-screen">
         <Navbar />
-        <div className="content">
+        <div className="content text-xl">
           <Switch>
             <Route exact path="/">
               <Home />
